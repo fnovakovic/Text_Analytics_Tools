@@ -8,6 +8,7 @@ import { PostListComponent } from './post-list/post-list.component';
 import {HttpClientModule} from "@angular/common/http";
 import { SinglePostComponent } from './single-post/single-post.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { PasswordPipe } from './password.pipe';
 
 @NgModule({
   declarations: [
@@ -15,13 +16,16 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     HomeComponent,
     PostListComponent,
     SinglePostComponent,
+    PasswordPipe,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    ReactiveFormsModule
-  ],
+
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

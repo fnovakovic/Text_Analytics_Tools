@@ -6,7 +6,7 @@ import {SinglePostComponent} from "./single-post/single-post.component";
 
 const routes: Routes = [
   {
-    path: "home",
+    path: "",
     component: HomeComponent
   },
   {

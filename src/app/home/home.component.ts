@@ -9,7 +9,14 @@ import {Router} from "@angular/router";
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  date: Date;
+
+  primaryColor: string = 'blue';
+  boldTextEnabled: boolean = true;
+
+  constructor(private router: Router) {
+    this.date = new Date();
+  }
 
   ngOnInit(): void {
 
