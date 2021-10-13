@@ -3,13 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { PostListComponent } from './post-list/post-list.component';
+import { HomeComponent } from './components/home/home.component';
+import { PostListComponent } from './components/post-list/post-list.component';
 import {HttpClientModule} from "@angular/common/http";
-import { SinglePostComponent } from './single-post/single-post.component';
+import { SinglePostComponent } from './components/single-post/single-post.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { PasswordPipe } from './password.pipe';
-import { ConfigurationComponent } from './configuration/configuration.component';
+import { ConfigurationComponent } from './components/configuration/configuration.component';
+import {PasswordPipe} from "./pipes/password.pipe";
 
 @NgModule({
   declarations: [
