@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {HomeComponent} from "./home/home.component";
 import {PostListComponent} from "./post-list/post-list.component";
 import {SinglePostComponent} from "./single-post/single-post.component";
+import {ConfigurationComponent} from "./configuration/configuration.component";
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: "posts/:id",
     component: SinglePostComponent,
+  },
+  {
+    path: "configuration",
+    component: ConfigurationComponent
   }
 ];
 

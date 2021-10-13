@@ -9,6 +9,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { SinglePostComponent } from './single-post/single-post.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { PasswordPipe } from './password.pipe';
+import { ConfigurationComponent } from './configuration/configuration.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { PasswordPipe } from './password.pipe';
     PostListComponent,
     SinglePostComponent,
     PasswordPipe,
+    ConfigurationComponent,
   ],
 
     imports: [
