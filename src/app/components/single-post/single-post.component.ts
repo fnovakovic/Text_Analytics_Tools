@@ -34,13 +34,14 @@ export class SinglePostComponent implements OnInit {
 
   ngOnInit(): void {
     const id: number = parseInt(<string>this.route.snapshot.paramMap.get('id'));
-    this.postService.findPost(id).toPromise().then(post => {
+    this.postService.findPost(id).subscribe(post => {
       this.post = post;
-      return post;
-    }).then(post => {
+
       this.postService.getComments(post.id).subscribe(comments => {
         this.comments = comments;
       })
+
+      return post;
     })
   }
 

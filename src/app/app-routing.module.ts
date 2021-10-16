@@ -11,17 +11,17 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: "configuration",
+    component: ConfigurationComponent
+  },
+  {
     path: "posts",
-    component: PostListComponent
+    component: PostListComponent,
   },
   {
     path: "posts/:id",
     component: SinglePostComponent,
   },
-  {
-    path: "configuration",
-    component: ConfigurationComponent
-  }
 ];
 
 @NgModule({
