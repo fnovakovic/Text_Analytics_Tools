@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {ConfigService} from "../../services/config.service";
 
 @Component({
   selector: 'app-root',
@@ -8,10 +7,8 @@ import {ConfigService} from "../../services/config.service";
 })
 export class AppComponent {
 
-  constructor(private configService: ConfigService) {
+  constructor() {
   }
 
-  getUserName() {
-    return this.configService.getUserName();
-  }
+
 }

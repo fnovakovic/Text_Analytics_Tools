@@ -1,26 +1,45 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {HomeComponent} from "./components/home/home.component";
-import {PostListComponent} from "./components/post-list/post-list.component";
-import {SinglePostComponent} from "./components/single-post/single-post.component";
-import {ConfigurationComponent} from "./components/configuration/configuration.component";
+import {AuthGuard} from "./auth.guard";
+import {ConfigureComponent} from "./components/configure/configure.component";
+import {EntityExtractionComponent} from "./components/entity-extraction/entity-extraction.component";
+import {TextSimilarityComponent} from "./components/text-similarity/text-similarity.component";
+import {LanguageDetectionComponent} from "./components/language-detection/language-detection.component";
+import {SentimentAnalysisComponent} from "./components/sentiment-analysis/sentiment-analysis.component";
+import {HistoryComponent} from "./components/history/history.component";
 
 const routes: Routes = [
   {
     path: "",
-    component: HomeComponent
+    component: ConfigureComponent,
   },
   {
-    path: "configuration",
-    component: ConfigurationComponent
+    path: "configure",
+    component: ConfigureComponent,
   },
   {
-    path: "posts",
-    component: PostListComponent,
+    path: "entityExtraction",
+    component: EntityExtractionComponent,
+    canActivate: [AuthGuard],
   },
   {
-    path: "posts/:id",
-    component: SinglePostComponent,
+    path: "textSimilarity",
+    component: TextSimilarityComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: "languageDetection",
+    component: LanguageDetectionComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: "sentimentAnalysis",
+    component: SentimentAnalysisComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: "history",
+    component: HistoryComponent,
   },
 ];
 
