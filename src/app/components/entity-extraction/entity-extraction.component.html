@@ -1,0 +1,67 @@
+<div>
+  <h3>Entity Extraction page</h3>
+
+  <div>
+
+
+    <form (submit)="setText()" class="mb-5">
+
+      <div class="form-group mb-2">
+
+        <label for="text">Text</label>
+        <input type="text" class="form-control" id="text" name="text" placeholder="Text" [(ngModel)]="text">
+
+        <p>Min confidence</p>
+        <div class="slider">
+          <input type="range" min="0" max="100" [(ngModel)]="num" name = "num">
+          <p id="rangeValue">{{(num* 1.0) / 100}}</p>
+        </div>
+
+
+
+
+<!--        <div class="form-check">-->
+<!--          <input [(ngModel)]="boxImage" class="form-check-input" type="checkbox" value="image" id="image">-->
+<!--          <label class="form-check-label" for="image">-->
+<!--            Image-->
+<!--          </label>-->
+<!--        </div>-->
+
+        <p>Include parametars (Optional):</p>
+      <div>
+        <input type="checkbox" id="boxImage" (change)="reverseImage()">
+        <!--        <input [(ngModel)]="box" class="form-check-input" type="checkbox" value="" id="box">-->
+        <label for="boxImage">Image</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="boxAbstract" (change)="reverseAbstract()">
+        <!--        <input [(ngModel)]="box" class="form-check-input" type="checkbox" value="" id="box">-->
+        <label for="boxAbstract">Abstract</label>
+      </div>
+
+
+        <div>
+          <input type="checkbox" id="boxCategory" (change)="reverseCategory()">
+          <!--        <input [(ngModel)]="box" class="form-check-input" type="checkbox" value="" id="box">-->
+          <label for="boxCategory">Category</label>
+        </div>
+
+
+
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+
+
+  <p>Language: {{entity.lang}}</p>
+  <div *ngFor="let annotation of entity.annotations;" class="mb-2">
+    <p>Annotations: {{ annotation.title }} {{" "}} {{annotation.start}}</p>
+    </div>
+<!--  <p>Annotatios: {{entity.annotations}}</p>-->
+<!--  <p>Title: {{annotations.title}}</p>-->
+<!--  <p>Start: {{annotations.start}}</p>-->
+</div>

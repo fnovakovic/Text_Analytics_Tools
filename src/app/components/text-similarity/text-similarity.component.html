@@ -1,0 +1,20 @@
+<div>
+  <h3>Text Similarty Page</h3>
+
+  <div>
+    <form (submit)="setText()" class="mb-5">
+      <div class="form-group mb-2">
+        <label for="text1">Text 1</label>
+        <input type="text" class="form-control" id="text1" name="text1" placeholder="Text 1" [(ngModel)]="text1">
+
+        <label for="text2">Text 2</label>
+        <input type="text" class="form-control" id="text2" name="text2" placeholder="Text 2" [(ngModel)]="text2">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <p> Language: {{similarity.lang}}</p>
+  <p> Accuracy: {{similarity.langConfidence}}</p>
+  <p> Similarity of the two given texts: {{similarity.similarity}}</p>
+</div>

@@ -1,0 +1,28 @@
+<div>
+  <h3>Language Detection Page</h3>
+
+  <div>
+    <form (submit)="setText()" class="mb-5">
+      <div class="form-group mb-2">
+        <label for="text1">Text</label>
+        <input type="text" class="form-control" id="text1" name="text1" placeholder="Text" [(ngModel)]="text">
+
+        <input type="checkbox" id="box" (change)="reverse()">
+<!--        <input [(ngModel)]="box" class="form-check-input" type="checkbox" value="" id="box">-->
+        <label for="box">Clean (Optional)</label>
+
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+  </div>
+
+  <p> Time: {{language.time}}</p>
+  <p> Time stamp: {{language.timestamp}}</p>
+  <div *ngFor="let lang of language.detectedLangs;" class="mb-2">
+    <p>Language: {{ lang.lang }}</p>
+    <p>Confidence: {{lang.confidence}}</p>
+  </div>
+
+</div>

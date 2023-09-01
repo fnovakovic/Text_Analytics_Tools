@@ -1,0 +1,7 @@
+<div>
+  <h1>History list</h1>
+  <div *ngFor="let post of posts;" class="mb-2">
+    <p>{{ post.date | date:'M/d/yy, h:mm a' }} {{" "}} {{post.methode}} {{" "}} {{post.address}}</p>
+    <h3>--------------------------------------------------------------------------------------------</h3>
+  </div>
+</div>
