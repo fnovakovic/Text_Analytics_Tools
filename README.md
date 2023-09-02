@@ -1,4 +1,4 @@
-#Text Analytics Tool
+# Text Analytics Tool
 
  Web application that enables text analysis using the various tools provided by the Dandelion API.
  The application provides the following functionalities:
